@@ -9,14 +9,14 @@ extern crate Color;
 let lum = Color::luminance([255, 255, 255]);
 assert_eq!(1.0, lum);
 
-// Create RGB instance from hex value
-let rgb = Color::RGB::from_hex("#00ff00").unwrap();
+// Create Color instance from hex value
+let rgb = Color::from_hex("#00ff00").unwrap();
 
 // Get RGB value.
 assert_eq!([0, 255, 0], rgb.value());
 
-// Create RGB instance
-let mut rgb = Color::RGB([0, 0, 0]);
+// Create new Color instance
+let mut rgb = Color::new([0, 0, 0]);
 
 // Inverted rgb value
 rgb.inverted();
